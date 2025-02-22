@@ -10,11 +10,14 @@
 </head>
 
 <body>
+	{% include 'navigation.html' %}
 
-	<main>
-		{% block content %}
-		{% endblock %}
-	</main>
+	<div class="container">
+		<main>
+			{% block content %}
+			{% endblock %}
+		</main>
+	</div>
 
 </body>
 
