@@ -76,3 +76,36 @@ select {
 	border: var(--blue) solid 2px;
 	background-color: var(--white);
 }
+
+nav {
+	background-color: var(--yellow);
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+}
+
+nav ul {
+	flex-grow: 1;
+	list-style-type: none;
+	display: flex;
+	margin: 0;
+	padding: 0;
+	max-width: 80%;
+	min-height: 100%;
+}
+nav li {
+	margin: 10px;
+}
+
+nav a {
+	padding: 20px;
+	display: block;
+	text-decoration: none;
+	color: var(--black);
+	font-size: 1.5rem;
+}
+nav a:hover {
+	color: var(--white);
+	background-color: var(--blue);
+}
