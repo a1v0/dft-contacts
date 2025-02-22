@@ -9,14 +9,19 @@ def handle_form_submit(request, form):
     if "save" in request.POST:
         form = ContactForm(request.POST)
         form.save()
-    elif "delete" in request.POST:
+        return
+
+    if "delete" in request.POST:
         id = request.POST.get("delete")
         contact = Contact.objects.get(id=id)
         contact.delete()
-    elif "edit" in request.POST:
+        return
+
+    if "edit" in request.POST:
         pass
-    else:
-        raise ValueError("No valid CRUD operator found in POST request.")
+        return
+
+    raise ValueError("No valid CRUD operator found in POST request.")
 
 
 def contacts(request):
