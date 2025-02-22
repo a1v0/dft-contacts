@@ -5,15 +5,19 @@ from .models import Contact
 from contacts.forms import ContactForm
 
 
+def handle_form_submit(request, form):
+    if "save" in request.POST:
+        form = ContactForm(request.POST)
+        form.save()
+
+
 def contacts(request):
     all_contacts = Contact.objects.all()
     template = loader.get_template("contacts_template.html")
     form = ContactForm()
 
     if request.method == "POST":
-        if "save" in request.POST:
-            form = ContactForm(request.POST)
-            form.save()
+        handle_form_submit(request, form)
 
     context = {}
     context["all_contacts"] = all_contacts
