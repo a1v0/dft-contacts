@@ -6,11 +6,35 @@ This app was created using Python 3 and the instructions give Linux commands. Ho
 
 ## Setup
 
-Clone the repo locally.
+Clone the repo locally using `git clone url/copied/from/github`.
 
 Create a virtual environment using the command `py -m venv venv`. Then open your virtual environment.
 
 Install any packages using `pip install`. _**[ENSURE THAT THE FILE CONTAINING ALL PACKAGE INFO IS IN THE REPO AND UP TO DATE. USE `pip freeze`]**_
+
+## Data storage
+
+For the time being, data is being stored in JSON format, like so:
+
+```json
+{
+ "types": [ "array", "of", "contact", "types", "e.g.", "friends", "family", "other" ],
+ "contacts": {
+  "id1": {
+   "first_name": "John",
+   "last_name": "Doe",
+   "email": "john@doe.com",
+   "mobile": "07111 111 111",
+   "types": [ "family" ]
+  },
+  "id2": "..."
+ }
+}
+```
+
+The `contacts` object contains a dictionary of `contact` objects whose key is their user ID.
+
+In a NoSQL database, the `contact.types` would contain references to the top-level `types` array.
 
 ## Brief
 
