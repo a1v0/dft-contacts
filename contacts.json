@@ -1,0 +1,61 @@
+{
+	"types": ["friends", "family", "work", "trade", "other"],
+	"contacts": {
+		"id1": {
+			"first_name": "Horace",
+			"last_name": "Cope",
+			"email": "horace@cope.com",
+			"mobile": "07111 111 111",
+			"types": ["family"]
+		},
+		"id2": {
+			"first_name": "Mum",
+			"last_name": "",
+			"email": "mum@doe.com",
+			"mobile": "07111 111 111",
+			"types": ["family"]
+		},
+		"id3": {
+			"first_name": "Barb",
+			"last_name": "Dwyer",
+			"email": "barb@doe.com",
+			"mobile": "07111 111 111",
+			"types": ["work"]
+		},
+		"id4": {
+			"first_name": "Sean",
+			"last_name": "Delier",
+			"email": "sean@doe.com",
+			"mobile": "07111 111 111",
+			"types": ["friends"]
+		},
+		"id5": {
+			"first_name": "N. G.",
+			"last_name": "Near (car mechanic)",
+			"email": "ngnear@doe.com",
+			"mobile": "07111 111 111",
+			"types": ["trade"]
+		},
+		"id6": {
+			"first_name": "Camilla",
+			"last_name": "Highwater",
+			"email": "camilla@doe.com",
+			"mobile": "07111 111 111",
+			"types": ["other"]
+		},
+		"id7": {
+			"first_name": "Barbara",
+			"last_name": "Seville",
+			"email": "seville@doe.com",
+			"mobile": "07111 111 111",
+			"types": ["friends"]
+		},
+		"id8": {
+			"first_name": "Albert",
+			"last_name": "Ross",
+			"email": "albert@doe.com",
+			"mobile": "07111 111 111",
+			"types": ["work"]
+		}
+	}
+}
