@@ -10,6 +10,11 @@ def contacts(request):
     template = loader.get_template("contacts_template.html")
     form = ContactForm()
 
+    if request.method == "POST":
+        if "save" in request.POST:
+            form = ContactForm(request.POST)
+            form.save()
+
     context = {}
     context["all_contacts"] = all_contacts
     context["form"] = form
