@@ -31,15 +31,19 @@
 		</tr>
 		{% endfor %}
 		<tr>
-			<td>new contact</td>
-			<td>new contact</td>
-			<td>new contact</td>
-			<td>new contact</td>
-			<td>new contact</td>
-			<td>new contact</td>
-			<td>
-				<button>SAVE</button>
-			</td>
+			<form>
+				<td></td>
+
+				{% for field in form %}
+
+				<td>{{ field }}</td>
+
+				{% endfor %}
+
+				<td>
+					<button>SAVE</button>
+				</td>
+			</form>
 		</tr>
 	</table>
 
