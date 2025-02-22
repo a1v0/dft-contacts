@@ -35,19 +35,12 @@
 			</td>
 		</tr>
 		{% endfor %}
+
+		{% if not form.instance.id %}
 		<tr>
-			<td></td>
-
-			{% for field in form %}
-
-			<td>{{ field }}</td>
-
-			{% endfor %}
-
-			<td>
-				<button name="save">SAVE</button>
-			</td>
+			{% include 'contact_form.html' %}
 		</tr>
+		{% endif %}
 	</form>
 </table>
 
