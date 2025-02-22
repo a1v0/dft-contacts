@@ -16,27 +16,7 @@ To seed the SQLite database, open `dft_contacts/seed_script.py` and follow the i
 
 ## Data storage
 
-For the time being, data is being stored in JSON format, like so:
-
-```json
-{
- "types": [ "array", "of", "contact", "types", "e.g.", "friends", "family", "other" ],
- "contacts": {
-  "id1": {
-   "first_name": "John",
-   "last_name": "Doe",
-   "email": "john@doe.com",
-   "mobile": "07111 111 111",
-   "types": [ "family" ]
-  },
-  "id2": "..."
- }
-}
-```
-
-The `contacts` object contains a dictionary of `contact` objects whose key is their user ID.
-
-In a NoSQL database, the `contact.types` would contain references to the top-level `types` array.
+We are using the out-of-the-box SQLite feature that Django provides. At present, the database has only one table, which uses the `Contact` model.
 
 ## Brief
 
