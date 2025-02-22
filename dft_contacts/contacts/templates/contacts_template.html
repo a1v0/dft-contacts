@@ -1,52 +1,51 @@
-<!DOCTYPE html>
-<html>
+{% extends "master.html" %}
 
-<body>
+{% block title %}Contacts App{% endblock %}
 
-	<h1>Contacts</h1>
+{% block content %}
 
-	<table>
-		<thead>
-			<th>ID</th>
-			<th>First Name</th>
-			<th>Last Name</th>
-			<th>Email</th>
-			<th>Mobile</th>
-			<th>Type</th>
-			<th></th>
-		</thead>
+<h1>Contacts</h1>
 
-		{% for contact in all_contacts %}
-		<tr>
-			<td>{{ contact.id }}</td>
-			<td>{{ contact.first_name }}</td>
-			<td>{{ contact.last_name }}</td>
-			<td>{{ contact.email }}</td>
-			<td>{{ contact.mobile }}</td>
-			<td>{{ contact.type_verbose }}</td>
+<table>
+	<thead>
+		<th>ID</th>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>Email</th>
+		<th>Mobile</th>
+		<th>Type</th>
+		<th></th>
+	</thead>
+
+	{% for contact in all_contacts %}
+	<tr>
+		<td>{{ contact.id }}</td>
+		<td>{{ contact.first_name }}</td>
+		<td>{{ contact.last_name }}</td>
+		<td>{{ contact.email }}</td>
+		<td>{{ contact.mobile }}</td>
+		<td>{{ contact.type_verbose }}</td>
+		<td>
+			<button>EDIT</button>
+			<button>DELETE</button>
+		</td>
+	</tr>
+	{% endfor %}
+	<tr>
+		<form>
+			<td></td>
+
+			{% for field in form %}
+
+			<td>{{ field }}</td>
+
+			{% endfor %}
+
 			<td>
-				<button>EDIT</button>
-				<button>DELETE</button>
+				<button>SAVE</button>
 			</td>
-		</tr>
-		{% endfor %}
-		<tr>
-			<form>
-				<td></td>
+		</form>
+	</tr>
+</table>
 
-				{% for field in form %}
-
-				<td>{{ field }}</td>
-
-				{% endfor %}
-
-				<td>
-					<button>SAVE</button>
-				</td>
-			</form>
-		</tr>
-	</table>
-
-</body>
-
-</html>
+{% endblock %}
