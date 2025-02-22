@@ -6,25 +6,29 @@ This app was created using Python 3 and the instructions give Linux commands. Ho
 
 ## Setup
 
-Clone the repo locally using `git clone url/copied/from/github`.
+Clone the repo locally using `git clone url/copied/from/github`. Enter the repo's root directory.
 
-Create a virtual environment using the command `py -m venv venv`. Then open your virtual environment.
+Create a virtual environment using the command `py -m venv name_of_virtual_env`. Then open your virtual environment using `. name_of_virtual_env/bin/activate`.
 
-Install any packages using `pip install`. _**[ENSURE THAT THE FILE CONTAINING ALL PACKAGE INFO IS IN THE REPO AND UP TO DATE. USE `pip freeze`]**_
+Install all packages using `pip install -r requirements.txt`.
 
-To seed the SQLite database, open `dft_contacts/seed_script.py` and follow the instructions in the comment at the top. This will give you a few dummy users to play around with.
+Run `py manage.py migrate` in the CLI to create the necessary table(s) in your SQLite database.
+
+To seed the database with dummy data, open `dft_contacts/seed_script.py` and follow the instructions in the comment at the top. This will give you a few dummy users to play around with.
+
+To start the app, run `py manage.py runserver`.
 
 ## Data storage
 
 We are using the out-of-the-box SQLite feature that Django provides. At present, the database has only one table, which uses the `Contact` model.
 
-## Deploying to production
+### Deploying to production
 
-Django is cross-platform and can be run from any major hosting provider. My preference is Azure, mainly because I use it for work, but also for their excellent setup guides. They have a very good [one for Python apps](https://learn.microsoft.com/en-us/azure/app-service/quickstart-python?tabs=flask%2Cwindows%2Cazure-cli%2Cazure-cli-deploy%2Cdeploy-instructions-azportal%2Cterminal-bash%2Cdeploy-instructions-zip-azcli#create-a-web-app-in-azure).
+Django is cross-platform and can be run from any major hosting provider. My preference is Azure, mainly because I use it for work, but also for their excellent setup guides. They have a very good one for [deploying Python apps in Azure](https://learn.microsoft.com/en-us/azure/app-service/quickstart-python?tabs=flask%2Cwindows%2Cazure-cli%2Cazure-cli-deploy%2Cdeploy-instructions-azportal%2Cterminal-bash%2Cdeploy-instructions-zip-azcli#create-a-web-app-in-azure).
 
 Azure's automated system will handle the installation for you.
 
-To seed the database with dummy data (not normally necessary in production), you will need to access the Azure command line to interact directly with your repo, following the instructions given above.
+To seed the database with dummy data (not normally necessary in production), you will need to access the Azure command line to interact directly with your hosted repo, following the instructions given above.
 
 ## Brief
 
