@@ -12,6 +12,8 @@ Create a virtual environment using the command `py -m venv venv`. Then open your
 
 Install any packages using `pip install`. _**[ENSURE THAT THE FILE CONTAINING ALL PACKAGE INFO IS IN THE REPO AND UP TO DATE. USE `pip freeze`]**_
 
+To seed the SQLite database, open `dft_contacts/seed_script.py` and follow the instructions in the comment at the top. This will give you a few dummy users to play around with.
+
 ## Data storage
 
 For the time being, data is being stored in JSON format, like so:
