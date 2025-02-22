@@ -6,13 +6,17 @@ This app was created using Python 3 and the instructions give Linux commands. Ho
 
 ## Setup
 
-Clone the repo locally using `git clone url/copied/from/github`.
+Clone the repo locally using `git clone url/copied/from/github`. Enter the repo's root directory.
 
-Create a virtual environment using the command `py -m venv venv`. Then open your virtual environment.
+Create a virtual environment using the command `py -m venv name_of_venv`. Then open your virtual environment using `. name_of_venv/bin/activate`.
 
-Install any packages using `pip install`. _**[ENSURE THAT THE FILE CONTAINING ALL PACKAGE INFO IS IN THE REPO AND UP TO DATE. USE `pip freeze`]**_
+Install any packages using `pip install -r requirements.txt`.
 
-To seed the SQLite database, open `dft_contacts/seed_script.py` and follow the instructions in the comment at the top. This will give you a few dummy users to play around with.
+Run `py manage.py migrate` in the CLI to create the necessary table(s) in your SQLite database.
+
+To seed the database with dummy data, open `dft_contacts/seed_script.py` and follow the instructions in the comment at the top. This will give you a few dummy users to play around with.
+
+To start the app, run `py manage.py runserver`.
 
 ## Data storage
 
