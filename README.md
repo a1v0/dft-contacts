@@ -2,6 +2,16 @@
 
 Django application created for a job application. The original brief is at the bottom of this README.
 
+This app was created using Python 3 and the instructions give Linux commands. However, the repo ought to run on Windows, too.
+
+## Setup
+
+Clone the repo locally.
+
+Create a virtual environment using the command `py -m venv venv`. Then open your virtual environment.
+
+Install any packages using `pip install`. _**[ENSURE THAT THE FILE CONTAINING ALL PACKAGE INFO IS IN THE REPO AND UP TO DATE. USE `pip freeze`]**_
+
 ## Brief
 
 Develop a simple Contacts web application that stores information such as name, address, and telephone numbers for contacts. Users should be able to see a list of contacts, as well as be able to perform CRUD activity for contacts.
