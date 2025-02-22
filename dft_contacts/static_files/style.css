@@ -1,0 +1,111 @@
+* {
+	--black: #000000;
+	--blue: #14213d;
+	--yellow: #fca311;
+	--grey: #e5e5e5;
+	--white: #ffffff;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	background-color: var(--blue);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+	padding: 0px;
+	margin: 0px;
+	min-height: 100%;
+}
+
+div.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 0px;
+	margin: 0px;
+	min-height: 100%;
+}
+
+main {
+	flex-grow: 1;
+	padding: 10px;
+	background-color: var(--grey);
+	max-width: 80%;
+	min-height: 100%;
+}
+
+input,
+select,
+button {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+}
+
+table {
+	background-color: var(--white);
+	border: none;
+	border-collapse: collapse;
+}
+
+td,
+th {
+	text-align: left;
+	padding: 5px;
+}
+
+thead {
+	border: 2px solid var(--blue);
+}
+
+button {
+	background-color: var(--yellow);
+	color: var(--blue);
+	padding: 5px;
+	border-radius: 5px;
+	border: none;
+	font-weight: bold;
+}
+
+input,
+select {
+	padding: 5px;
+	border-radius: 5px;
+	border: var(--blue) solid 2px;
+	background-color: var(--white);
+}
+
+nav {
+	background-color: var(--yellow);
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+}
+
+nav ul {
+	flex-grow: 1;
+	list-style-type: none;
+	display: flex;
+	margin: 0;
+	padding: 0;
+	max-width: 80%;
+	min-height: 100%;
+}
+nav li {
+	margin: 10px;
+}
+
+nav a {
+	padding: 20px;
+	display: block;
+	text-decoration: none;
+	color: var(--black);
+	font-size: 1.5rem;
+}
+nav a:hover {
+	color: var(--white);
+	background-color: var(--blue);
+}

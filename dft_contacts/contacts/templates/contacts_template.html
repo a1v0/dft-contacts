@@ -1,0 +1,64 @@
+{% extends "master.html" %}
+
+{% block title %}Contacts App{% endblock %}
+
+{% block content %}
+
+<h1>Contacts</h1>
+
+<p>Below you can add, remove or edit your contacts.</p>
+
+<table>
+	<form method="POST" action="{% url 'contacts' %}">
+		{% csrf_token %}
+		<thead>
+			<th>ID</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Email</th>
+			<th>Mobile</th>
+			<th>Type</th>
+			<th></th>
+		</thead>
+
+		{% for contact in all_contacts %}
+		<tr>
+			{% if form.instance.id == contact.id %}
+			{% include 'contact_form.html' %}
+			{% else %}
+			<td>{{ contact.id }}</td>
+			<td>{{ contact.first_name }}</td>
+			<td>{{ contact.last_name }}</td>
+			<td>{{ contact.email }}</td>
+			<td>{{ contact.mobile }}</td>
+			<td>{{ contact.type_verbose }}</td>
+			<td>
+				<button formnovalidate name="edit" value="{{ contact.id }}">EDIT</button>
+				<button formnovalidate name="delete" value="{{ contact.id }}">DELETE</button>
+			</td>
+			{% endif %}
+		</tr>
+		{% endfor %}
+
+		{% if not form.instance.id %}
+		<tr>
+			{% include 'contact_form.html' %}
+		</tr>
+		{% endif %}
+	</form>
+</table>
+
+<h2>Bonus features for just £329.99/month!</h2>
+<p>If you subscribe to our monthly plan (and wait for the necessary updates to be made to the platform), you can expect these extra features:</p>
+<ul>
+	<li>Better accessibility: skip links, aria labels, WCAG, syntactic HTML</li>
+	<li>Mobile-first design</li>
+	<li>A PyTest test suite to increase confidence in the platform</li>
+	<li>The ability to add different types of phone number</li>
+	<li>More streamlined CSS</li>
+	<li>Ability to search/filter</li>
+	<li>Ability to sort the list</li>
+	<li>Ability to add to list of contact types</li>
+</ul>
+
+{% endblock %}
