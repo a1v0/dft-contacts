@@ -23,6 +23,9 @@
 
 		{% for contact in all_contacts %}
 		<tr>
+			{% if form.instance.id == contact.id %}
+			{% include 'contact_form.html' %}
+			{% else %}
 			<td>{{ contact.id }}</td>
 			<td>{{ contact.first_name }}</td>
 			<td>{{ contact.last_name }}</td>
@@ -33,6 +36,7 @@
 				<button formnovalidate name="edit" value="{{ contact.id }}">EDIT</button>
 				<button formnovalidate name="delete" value="{{ contact.id }}">DELETE</button>
 			</td>
+			{% endif %}
 		</tr>
 		{% endfor %}
 
