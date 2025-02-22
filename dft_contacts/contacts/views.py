@@ -7,8 +7,16 @@ from contacts.forms import ContactForm
 
 def handle_form_submit(request, form):
     if "save" in request.POST:
-        form = ContactForm(request.POST)
+        id = request.POST.get("save")
+        if not id:
+            form = ContactForm(request.POST)
+        else:
+            contact = Contact.objects.get(id=id)
+            form = ContactForm(request.POST, instance=contact)
+
         form.save()
+
+        form = ContactForm()  # Reset form before returning
         return form
 
     if "delete" in request.POST:
