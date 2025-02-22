@@ -20,56 +20,56 @@ contact0 = Contact(
     last_name="Ross",
     email="albert@example.com",
     mobile="07111 111 111",
-    type=3,
+    type="3",
 )
 contact1 = Contact(
     first_name="Barbara",
     last_name="Seville",
     email="seville@example.com",
     mobile="07111 111 111",
-    type=2,
+    type="2",
 )
 contact2 = Contact(
     first_name="Camilla",
     last_name="Highwater",
     email="camilla@example.com",
     mobile="07111 111 111",
-    type=5,
+    type="5",
 )
 contact3 = Contact(
     first_name="N. G.",
     last_name="Near",
     email="ngnear@example.com",
     mobile="07111 111 111",
-    type=4,
+    type="4",
 )
 contact4 = Contact(
     first_name="Sean",
     last_name="Delier",
     email="sean@example.com",
     mobile="07111 111 111",
-    type=2,
+    type="2",
 )
 contact5 = Contact(
     first_name="Barb",
     last_name="Dwyer",
     email="barb@example.com",
     mobile="07111 111 111",
-    type=3,
+    type="3",
 )
 contact6 = Contact(
     first_name="Horace",
     last_name="Cope",
     email="horace@cope.com",
     mobile="07111 111 111",
-    type=1,
+    type="1",
 )
 contact7 = Contact(
     first_name="I. C. Theresa",
     last_name="Green",
     email="theresa@example.com",
     mobile="07111 111 111",
-    type=1,
+    type="1",
 )
 
 contacts_list = [
