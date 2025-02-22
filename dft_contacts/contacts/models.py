@@ -15,6 +15,6 @@ class Contact(models.Model):
     last_name = models.CharField(max_length=50)
     email = models.CharField(max_length=100)
     mobile = models.CharField(max_length=20)
-    type = models.CharField(
-        max_length=1, choices=[(type.value[0], type.value[1]) for type in TypeEnum]
+    type = models.IntegerField(
+        choices=[(type.value[0], type.value[1]) for type in TypeEnum]
     )
