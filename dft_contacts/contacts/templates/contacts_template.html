@@ -30,8 +30,8 @@
 			<td>{{ contact.mobile }}</td>
 			<td>{{ contact.type_verbose }}</td>
 			<td>
-				<button name="edit">EDIT</button>
-				<button name="delete">DELETE</button>
+				<button formnovalidate name="edit" value="{{ contact.id }}">EDIT</button>
+				<button formnovalidate name="delete" value="{{ contact.id }}">DELETE</button>
 			</td>
 		</tr>
 		{% endfor %}
