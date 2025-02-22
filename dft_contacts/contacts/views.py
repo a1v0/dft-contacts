@@ -9,6 +9,10 @@ def handle_form_submit(request, form):
     if "save" in request.POST:
         form = ContactForm(request.POST)
         form.save()
+    elif "delete" in request.POST:
+        id = request.POST.get("delete")
+        contact = Contact.objects.get(id=id)
+        contact.delete()
 
 
 def contacts(request):
