@@ -9,32 +9,33 @@
 <p>Below you can add, remove or edit your contacts.</p>
 
 <table>
-	<thead>
-		<th>ID</th>
-		<th>First Name</th>
-		<th>Last Name</th>
-		<th>Email</th>
-		<th>Mobile</th>
-		<th>Type</th>
-		<th></th>
-	</thead>
+	<form method="POST" action="{% url 'contacts' %}">
+		{% csrf_token %}
+		<thead>
+			<th>ID</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Email</th>
+			<th>Mobile</th>
+			<th>Type</th>
+			<th></th>
+		</thead>
 
-	{% for contact in all_contacts %}
-	<tr>
-		<td>{{ contact.id }}</td>
-		<td>{{ contact.first_name }}</td>
-		<td>{{ contact.last_name }}</td>
-		<td>{{ contact.email }}</td>
-		<td>{{ contact.mobile }}</td>
-		<td>{{ contact.type_verbose }}</td>
-		<td>
-			<button>EDIT</button>
-			<button>DELETE</button>
-		</td>
-	</tr>
-	{% endfor %}
-	<tr>
-		<form>
+		{% for contact in all_contacts %}
+		<tr>
+			<td>{{ contact.id }}</td>
+			<td>{{ contact.first_name }}</td>
+			<td>{{ contact.last_name }}</td>
+			<td>{{ contact.email }}</td>
+			<td>{{ contact.mobile }}</td>
+			<td>{{ contact.type_verbose }}</td>
+			<td>
+				<button name="edit">EDIT</button>
+				<button name="delete">DELETE</button>
+			</td>
+		</tr>
+		{% endfor %}
+		<tr>
 			<td></td>
 
 			{% for field in form %}
@@ -44,10 +45,10 @@
 			{% endfor %}
 
 			<td>
-				<button>SAVE</button>
+				<button name="save">SAVE</button>
 			</td>
-		</form>
-	</tr>
+		</tr>
+	</form>
 </table>
 
 <h2>Bonus features for just £329.99/month!</h2>
@@ -58,6 +59,7 @@
 	<li>A PyTest test suite to increase confidence in the platform</li>
 	<li>The ability to add different types of phone number</li>
 	<li>More streamlined CSS</li>
+	<li>Ability to sort the list</li>
 	<li>Ability to add to list of contact types</li>
 </ul>
 
