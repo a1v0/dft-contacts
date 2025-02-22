@@ -9,4 +9,45 @@
 body {
 	background-color: var(--grey);
 	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+}
+
+input,
+select,
+button {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+}
+
+table {
+	background-color: var(--white);
+	border: none;
+	border-collapse: collapse;
+}
+
+td,
+th {
+	text-align: left;
+	padding: 5px;
+}
+
+thead {
+	border: 2px solid var(--blue);
+}
+
+button {
+	background-color: var(--yellow);
+	color: var(--blue);
+	padding: 5px;
+	border-radius: 5px;
+	border: none;
+	font-weight: bold;
+}
+
+input,
+select {
+	padding: 5px;
+	border-radius: 5px;
+	border: var(--blue) solid 2px;
+	background-color: var(--white);
 }
