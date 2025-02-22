@@ -18,6 +18,14 @@ To seed the SQLite database, open `dft_contacts/seed_script.py` and follow the i
 
 We are using the out-of-the-box SQLite feature that Django provides. At present, the database has only one table, which uses the `Contact` model.
 
+## Deploying to production
+
+Django is cross-platform and can be run from any major hosting provider. My preference is Azure, mainly because I use it for work, but also for their excellent setup guides. They have a very good [one for Python apps](https://learn.microsoft.com/en-us/azure/app-service/quickstart-python?tabs=flask%2Cwindows%2Cazure-cli%2Cazure-cli-deploy%2Cdeploy-instructions-azportal%2Cterminal-bash%2Cdeploy-instructions-zip-azcli#create-a-web-app-in-azure).
+
+Azure's automated system will handle the installation for you.
+
+To seed the database with dummy data (not normally necessary in production), you will need to access the Azure command line to interact directly with your repo, following the instructions given above.
+
 ## Brief
 
 Develop a simple Contacts web application that stores information such as name, address, and telephone numbers for contacts. Users should be able to see a list of contacts, as well as be able to perform CRUD activity for contacts.
