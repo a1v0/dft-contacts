@@ -9,6 +9,12 @@ of this file into the CLI. This will generate several records.
 
 from contacts.models import Contact
 
+
+# UNCOMMENT THIS LOOP TO DELETE EXISTING DATA IN THE DATABASE BEFORE SEEDING
+# for existing_contact in Contact.objects.all():
+#     existing_contact.delete()
+
+
 contact0 = Contact(
     first_name="Albert",
     last_name="Ross",
